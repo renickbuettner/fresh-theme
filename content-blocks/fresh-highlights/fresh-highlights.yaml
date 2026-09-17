@@ -1,0 +1,28 @@
+handle: fresh-highlights
+name: Product highlights
+icon: icon-star
+group: Fresh
+version: 1
+settings: true
+fields:
+  columns:
+    label: Columns
+    type: dropdown
+    options:
+      '2': 2 columns
+      '3': 3 columns
+    default: '3'
+  items:
+    label: Highlights
+    type: repeater
+    fields:
+      title:
+        label: Title
+        type: text
+      icon:
+        label: Icon
+        type: iconpicker
+      text:
+        label: Text
+        type: textarea
+        size: small

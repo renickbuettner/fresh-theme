@@ -1,0 +1,21 @@
+handle: fresh-specs
+name: Specifications
+icon: icon-list-ul
+group: Fresh
+version: 1
+settings: true
+fields:
+  title:
+    label: Title
+    type: text
+    default: Specifications
+  rows:
+    label: Rows
+    type: repeater
+    fields:
+      label:
+        label: Label
+        type: text
+      value:
+        label: Value
+        type: text

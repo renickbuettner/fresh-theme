@@ -11,3 +11,4 @@ require:
     - RainLab.Location
     - Responsiv.Pay
     - Responsiv.Currency
+    - Renick.Content
