@@ -124,7 +124,8 @@
             <div class="my-4">
                 {% if product.short_description or product.description %}
                     <p class="lead">{{ product.short_description }}</p>
-                    {{ product.description|raw }}
+                    {# description_html comes from Renick.Content: block documents render, rich text passes through #}
+                    <div class="product-description-blocks">{{ (product.description_html ?? product.description)|raw }}</div>
                 {% else %}
                     <p class="text-muted"><em>{{ __("Product has no description.") }}</em></p>
                 {% endif %}

@@ -1,0 +1,13 @@
+<div {{ attributes|raw }}>
+    <div class="fresh-specs">
+        {% if data.title|default('') %}<h3 class="h6 fresh-specs-title">{{ data.title }}</h3>{% endif %}
+        <dl class="fresh-specs-list mb-0">
+            {% for row in data.rows|default([]) %}
+            <div class="fresh-specs-row">
+                <dt>{{ row.label }}</dt>
+                <dd>{{ row.value }}</dd>
+            </div>
+            {% endfor %}
+        </dl>
+    </div>
+</div>

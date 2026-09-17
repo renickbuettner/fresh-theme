@@ -1,0 +1,15 @@
+{% set columns = data.columns|default('3') in ['2', '3'] ? data.columns|default('3') : '3' %}
+<div {{ attributes|raw }}>
+    <div class="row g-3 fresh-highlights">
+        {% for item in data.items|default([]) %}
+        <div class="col-sm-6 col-lg-{{ columns == '2' ? '6' : '4' }}">
+            <div class="fresh-highlight h-100">
+                {% set icon = rc_icon(item.icon|default(''), 22) %}
+                {% if icon %}<div class="fresh-highlight-icon">{{ icon|raw }}</div>{% endif %}
+                {% if item.title|default('') %}<h3 class="h6 mb-1">{{ item.title }}</h3>{% endif %}
+                {% if item.text|default('') %}<p class="text-muted small mb-0">{{ item.text|nl2br }}</p>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
