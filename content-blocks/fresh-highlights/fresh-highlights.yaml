@@ -16,12 +16,12 @@ fields:
     label: Highlights
     type: repeater
     fields:
-      icon:
-        label: Icon
-        type: iconpicker
       title:
         label: Title
         type: text
+      icon:
+        label: Icon
+        type: iconpicker
       text:
         label: Text
         type: textarea
